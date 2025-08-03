@@ -72,16 +72,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Verify runner environment
-        run: |
-          echo "✅ Runner is alive"
-          echo "🏷️ Hostname: $(hostname)"
-          echo "📂 Current directory: $(pwd)"
-          echo "📁 Files:"
-          ls -la
-          echo "🕒 Time: $(date)"
           
-          
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
